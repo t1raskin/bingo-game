@@ -1,9 +1,5 @@
-<h2>Top Heroes</h2>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes"
-      routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
-  </a>
+<div class="bingo-container">
+    <div class="bingo-card">
+        <div *ngFor="let i of [].constructor(25)" class="bingo-card-cell">{{randomArrCell()}}</div>
+    </div>
 </div>
-
-<app-hero-search></app-hero-search>

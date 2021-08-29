@@ -1,54 +1,26 @@
 /* DashboardComponent's private CSS styles */
 
-h2 {
+.bingo-container {
+  grid-column: span 5;
   text-align: center;
+  margin: 0 auto;
+  width: 630px;
 }
 
-.heroes-menu {
-  padding: 0;
-  margin: auto;
-  max-width: 1000px;
+.bingo-card {
+  padding: 10px;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-rows: repeat(5, 140px);
+  grid-template-columns: repeat(5, 140px);
+}
 
-  /* flexbox */
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.bingo-card-cell {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  align-items: flex-start;
-}
-
-a {
-  background-color: #3f525c;
-  border-radius: 2px;
-  padding: 1rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
+  align-items: center;
   text-align: center;
-  width: 100%;
-  min-width: 70px;
-  margin: .5rem auto;
-  box-sizing: border-box;
-
-  /* flexbox */
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
-}
-
-@media (min-width: 600px) {
-  a {
-    width: 18%;
-    box-sizing: content-box;
-  }
-}
-
-a:hover {
-  background-color: black;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  background: #ecec88;
 }
