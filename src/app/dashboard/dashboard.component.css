@@ -7,15 +7,15 @@
   grid-column: span 5;
   text-align: center;
   margin: 0 auto;
-  width: 632px;
+  width: 538px;
 }
 
 .bingo-card {
   padding: 10px;
   display: grid;
   grid-gap: 3px;
-  grid-template-rows: repeat(5, 120px);
-  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(5, 100px);
+  grid-template-columns: repeat(5, 100px);
 }
 
 .bingo-card-cell {
@@ -27,7 +27,7 @@
   cursor: pointer;
   background: white;
   padding: 7px;
-  font-size: 15px;
+  font-size: 13px;
   color: #0081ab;
   font-weight: 600;
 }
