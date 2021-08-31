@@ -1,0 +1,10 @@
+<h2>Admin screen</h2>
+
+<div>
+    <button (click)="addNextSentence()">Next Sentence</button>
+
+    <div >
+        <div *ngFor="let i of selectedSentencesArr; let index = index" style="padding: 5px;"><div>{{index+1}}. {{i}}</div>
+    </div>
+
+</div>

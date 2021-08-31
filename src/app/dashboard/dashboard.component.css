@@ -1,18 +1,21 @@
 /* DashboardComponent's private CSS styles */
 
+
+
 .bingo-container {
+  padding-top: 20px;
   grid-column: span 5;
   text-align: center;
   margin: 0 auto;
-  width: 630px;
+  width: 632px;
 }
 
 .bingo-card {
   padding: 10px;
   display: grid;
   grid-gap: 3px;
-  grid-template-rows: repeat(5, 140px);
-  grid-template-columns: repeat(5, 140px);
+  grid-template-rows: repeat(5, 120px);
+  grid-template-columns: repeat(5, 120px);
 }
 
 .bingo-card-cell {
@@ -22,5 +25,14 @@
   justify-content: center;
   position: relative;
   cursor: pointer;
-  background: #ecec88;
+  background: white;
+  padding: 7px;
+  font-size: 15px;
+  color: #0081ab;
+  font-weight: 600;
+}
+
+.isChecked {
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
 }

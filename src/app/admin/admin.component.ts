@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: [ './dashboard.component.css' ]
+  selector: 'app-heroes',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class DashboardComponent implements OnInit {
-
+export class AdminComponent implements OnInit {
   bingoArr: any = []
+  selectedSentencesArr: any = []
 
   constructor() { }
 
   ngOnInit() {
-    for (let i=0; i<25; i++) {
-      this.bingoArr[i] = {name: this.randomArrCell(), isChecked: false};
+    const arrLength = this.heroes.length;
+    for (let i=0; i<arrLength; i++) {
+      this.bingoArr[i] = this.randomArrCell();
     }
+  }
+
+  addNextSentence() {
+    this.selectedSentencesArr.push(this.bingoArr[0]);
+    this.bingoArr.splice(0, 1);
   }
 
   randomArrCell(): string {
@@ -69,4 +75,6 @@ export class DashboardComponent implements OnInit {
     "invested in crypto",
     "came up with an app idea & did nothing"
   ];
+
+
 }

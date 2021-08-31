@@ -1,5 +1,5 @@
 <div class="bingo-container">
     <div class="bingo-card">
-        <div *ngFor="let i of [].constructor(25)" class="bingo-card-cell">{{randomArrCell()}}</div>
+        <div *ngFor="let i of bingoArr" (click)="i.isChecked = !i.isChecked" [class.isChecked]="i.isChecked" class="bingo-card-cell"><div>{{i.name}}</div>
     </div>
 </div>
